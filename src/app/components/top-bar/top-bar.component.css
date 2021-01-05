@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: darkcyan;
+    padding: 0 10px;
+}
+
+.navbar .navbar-right {
+    display: flex;
+}
+
+.navbar .navbar-item {
+    margin: 0 2px;
+    padding: 4px 10px;
+    color: white;
+}
+
+.navbar .navbar-item:hover {
+    opacity: 0.5;
+}
