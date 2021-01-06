@@ -1,0 +1,25 @@
+<section class="section">
+    <h1 class="title">CADASTRO</h1>
+    <form class="form" (submit)="onSubmit($event)">
+        <div class="field">
+            <label for="name">name</label>
+            <input type="text" name="name" [(ngModel)]="name" />
+        </div>
+        <div class="field">
+            <label for="username">username</label>
+            <input type="text" name="username" [(ngModel)]="username" />
+        </div>
+        <div class="field">
+            <label for="username">password</label>
+            <input type="password" name="password" [(ngModel)]="password" />
+        </div>
+        <div class="field">
+            <label for="role">role</label>
+            <input type="text" name="role" [(ngModel)]="role" />
+        </div>
+        <div class="field-button">
+            <a routerLink="/auth">Conectar-se</a>
+            <button type="submit">Cadastrar</button>
+        </div>
+    </form>
+</section>

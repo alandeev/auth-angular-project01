@@ -1,0 +1,17 @@
+<section class="section">
+    <h1 class="title">LOGIN</h1>
+    <form class="form" (submit)="onSubmit($event)">
+        <div class="field">
+            <label for="username">username</label>
+            <input type="text" name="username" [(ngModel)]="username" />
+        </div>
+        <div class="field">
+            <label for="username">password</label>
+            <input type="password" name="password" [(ngModel)]="password" />
+        </div>
+        <div class="field-button">
+            <a routerLink="/register">Registrar</a>
+            <button type="submit">Conectar</button>
+        </div>
+    </form>
+</section>
