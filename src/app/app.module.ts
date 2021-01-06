@@ -15,6 +15,9 @@ import { isConnected, notConnected } from './guards/connectedGuard';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { IndexComponent } from './pages/master-auth/index/index.component';
 import { TopBarMasterComponent } from './pages/master-dash/components/top-bar-master/top-bar-master.component';
+import { SideBarMasterComponent } from './pages/master-dash/components/side-bar-master/side-bar-master.component';
+import { UserDetailComponent } from './pages/master-dash/pages/user-detail/user-detail.component';
+import { IndexMasterComponent } from './pages/master-dash/pages/index-master/index-master.component';
 
 const routes: Routes = [
   { 
@@ -31,6 +34,10 @@ const routes: Routes = [
   { 
     path: 'painel', 
     canActivate: [isConnected],
+    children: [
+      { path: '', component: IndexMasterComponent },
+      { path: 'user', component: UserDetailComponent }
+    ],
     component: MasterDashComponent 
   },
   {
@@ -47,7 +54,11 @@ const routes: Routes = [
     RegisterComponent,
     MasterAuthComponent,
     MasterDashComponent,
-    TopBarMasterComponent
+    TopBarMasterComponent,
+    SideBarMasterComponent,
+    UserDetailComponent,
+    IndexComponent,
+    IndexMasterComponent
   ],
   imports: [
     BrowserModule,

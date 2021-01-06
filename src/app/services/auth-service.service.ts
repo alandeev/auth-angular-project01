@@ -14,8 +14,7 @@ export class AuthService {
       await this.http.post<IToken>("https://localhost:5001/v1/register", {
         name: data.name,  
         username: data.username,
-        password: data.password,
-        role: data.role
+        password: data.password
       }, {
         responseType: "json"
       }).toPromise();

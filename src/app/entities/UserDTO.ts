@@ -7,5 +7,4 @@ export interface UserRegisterDTO {
     name: string;
     username: string;
     password: string;
-    role: string;
 }

@@ -11,7 +11,6 @@ export class RegisterComponent {
   name: string = "";
   username: string = "";
   password: string = "";
-  role: string = "";
 
   constructor(private authService: AuthService){}
 
@@ -23,8 +22,7 @@ export class RegisterComponent {
       await this.authService.register({
         name: this.name,
         username: this.username,
-        password: this.password,
-        role: this.role
+        password: this.password
       }) 
       alert("Cadastrado!");
     }catch(err){

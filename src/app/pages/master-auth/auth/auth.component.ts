@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth-service.service';
 
 @Component({
@@ -11,7 +13,7 @@ export class AuthComponent {
   username: string = "";
   password: string = "";
 
-  constructor(private authService: AuthService){ }
+  constructor(private authService: AuthService, private router: Router){ }
 
   async onSubmit(event: Event){
     event.preventDefault();
@@ -23,6 +25,7 @@ export class AuthComponent {
       })
 
       localStorage.setItem("authorization", token);
+      return this.router.navigate(['/painel'])
     }catch(err){
       alert(err.message);
     }
