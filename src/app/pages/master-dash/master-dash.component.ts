@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IUser } from 'src/app/entities/IUser';
 
 @Component({
   selector: 'app-master-dash',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./master-dash.component.css']
 })
 export class MasterDashComponent implements OnInit {
-
-  constructor() { }
+  public user: IUser; 
+  constructor() { 
+    this.user = JSON.parse(localStorage.getItem("user"));
+  }
 
   ngOnInit(): void {
   }
-
 }

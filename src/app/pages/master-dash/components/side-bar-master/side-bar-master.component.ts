@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-side-bar-master',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar-master.component.css']
 })
 export class SideBarMasterComponent implements OnInit {
-
+  @Input("username") username: string;
   constructor() { }
 
   ngOnInit(): void {

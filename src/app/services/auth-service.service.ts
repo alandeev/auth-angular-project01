@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UserConnectDTO, UserRegisterDTO } from '../entities/UserDTO';
-import { IToken } from '../entities/TokenDTO';
+import { IToken } from '../entities/IToken';
 
 @Injectable({
   providedIn: 'root'
