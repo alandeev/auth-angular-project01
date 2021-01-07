@@ -34,11 +34,7 @@ const routes: Routes = [
   { 
     path: 'painel', 
     component: MasterDashComponent,
-    canActivate: [isConnected],
-    children: [
-      { path: '', component: IndexMasterComponent },
-      { path: 'user', component: UserDetailComponent }
-    ], 
+    canActivate: [isConnected]
   },
   {
     path: '**',
