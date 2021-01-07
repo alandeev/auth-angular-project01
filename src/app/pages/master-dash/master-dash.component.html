@@ -1,5 +1,14 @@
-<app-top-bar-master></app-top-bar-master>
+<header class="header">
+    <app-top-bar-master (onSelect)="selectPage = $event" ></app-top-bar-master>
+</header>
 <section class="section">
-    <app-side-bar-master [username]="user.username" ></app-side-bar-master>
-    <router-outlet></router-outlet>
+    <app-side-bar-master [name]="user.name" [role]="user.role" (onSelect)="selectPage = $event" ></app-side-bar-master>
+    <div class="container">
+        <h3>{{ selectPage }}</h3>
+        <div [ngSwitch]="selectPage">
+            <app-index-master *ngSwitchDefault></app-index-master>
+            <app-user-detail *ngSwitchCase="'user'"></app-user-detail>
+            <div *ngSwitchCase="'admin'">ADMIN SETTINGS</div>
+        </div>
+    </div>
 </section>

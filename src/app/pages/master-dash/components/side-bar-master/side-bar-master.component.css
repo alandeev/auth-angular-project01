@@ -1,9 +1,11 @@
 .side-bar-master {
+    margin-top: -6px;
     height: 100%;
     width: 150px;
 }
 
 .side-bar-master .profile {
+    border-top-right-radius: 10px;
     background: #010101;
     color: white;
     display: flex;
@@ -15,9 +17,16 @@
 .side-bar-master .items {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    height: 93%;
     background: cornflowerblue;
+    height: 86%;
+}
+
+.side-bar-master .items div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .side-bar-master .items .item {
@@ -30,4 +39,8 @@
 
 .side-bar-master .items .item:hover {
     opacity: 0.8;
+}
+
+.side-bar-master .items .item-admin {
+    /* height: 10px; */
 }

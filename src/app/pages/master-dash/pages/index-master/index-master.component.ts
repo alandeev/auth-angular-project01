@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-index-master',
@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index-master.component.css']
 })
 export class IndexMasterComponent implements OnInit {
-
+  @Output('received') evt = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
+    this.evt.emit("home");
   }
-
 }

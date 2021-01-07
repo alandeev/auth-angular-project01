@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth-service.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class RegisterComponent {
   username: string = "";
   password: string = "";
 
-  constructor(private authService: AuthService){}
+  constructor(private authService: AuthService, private router: Router){}
 
   async onSubmit(event: Event){
     event.preventDefault();
@@ -23,8 +24,9 @@ export class RegisterComponent {
         name: this.name,
         username: this.username,
         password: this.password
-      }) 
-      alert("Cadastrado!");
+      });
+
+      return this.router.navigate(['/auth']);
     }catch(err){
       alert(err.message);
     }

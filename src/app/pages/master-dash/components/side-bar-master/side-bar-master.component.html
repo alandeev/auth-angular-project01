@@ -1,10 +1,12 @@
 <nav class="side-bar-master">
     <div class="profile">
-        <h4>{{ username }}</h4>
+        <h4>{{ name }}</h4>
     </div>
     <div class="items">
-        <a class="item" routerLink="user">Conta</a>
-        <a class="item">Trocar senha</a>
-        <a class="item">Admin</a>
+        <div class="tools">
+            <a class="item" (click)="evt.emit('user')">Conta</a>
+            <a class="item" (click)="evt.emit('change')" >Trocar senha</a>
+        </div>
+        <a class="item admin-tools" *ngIf="role == 'admin'" (click)="evt.emit('admin')" >Admin</a>
     </div>
 </nav>
