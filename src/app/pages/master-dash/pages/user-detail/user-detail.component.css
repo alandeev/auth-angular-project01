@@ -1,0 +1,35 @@
+.form {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+ .form .field {
+    margin: 5px 0;
+    width: 100%;
+}
+
+.form .field label {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.form .field input {
+    padding: 0 10px;
+    height: 35px;
+    width: 100%;
+}
+
+.form .field-button {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form .field-button button[type="submit"] {
+    padding: 3px 6px;
+}

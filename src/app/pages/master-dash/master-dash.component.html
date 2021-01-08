@@ -4,7 +4,6 @@
 <section class="section">
     <app-side-bar-master [name]="user.name" [role]="user.role" (onSelect)="selectPage = $event" ></app-side-bar-master>
     <div class="container">
-        <h3>{{ selectPage }}</h3>
         <div [ngSwitch]="selectPage">
             <app-index-master *ngSwitchDefault></app-index-master>
             <app-user-detail *ngSwitchCase="'user'"></app-user-detail>

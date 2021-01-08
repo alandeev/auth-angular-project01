@@ -1,6 +1,6 @@
 .side-bar-master {
     margin-top: -6px;
-    height: 100%;
+    height: 95%;
     width: 150px;
 }
 
@@ -20,7 +20,7 @@
     justify-content: space-between;
     align-items: center;
     background: cornflowerblue;
-    height: 86%;
+    height: 100%;
 }
 
 .side-bar-master .items div {

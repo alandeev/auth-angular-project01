@@ -1,1 +1,21 @@
-<p>user-detail works!</p>
+<div class="details">
+    <img *ngIf="image" width="70px" height="70px" [src]="'https://localhost:5001/upload/'+image.filename" />
+</div>
+<form class="form" (submit)="onSubmit($event)">
+    <div class="field">
+        <label for="name">name</label>
+        <input type="text" name="name" [(ngModel)]="name" />
+    </div>
+    <div class="field">
+        <label for="username">username</label>
+        <input type="text" name="username" [(ngModel)]="username" />
+    </div>
+    <div class="field">
+        <label for="username">password</label>
+        <input type="password" name="password" [(ngModel)]="password" />
+    </div>
+    <div class="field-button">
+        <a routerLink="/auth">Conectar-se</a>
+        <button type="submit">Cadastrar</button>
+    </div>
+</form>
