@@ -1,5 +1,5 @@
-<div class="details">
-    <img *ngIf="image" width="70px" height="70px" [src]="'https://localhost:5001/upload/'+image.filename" />
+<div class="details"  >
+    <img width="70px" height="70px" (click)="openDialog()" [src]="'https://localhost:5001/upload/' + (image ? image.filename : 'img_avatar.png')" />
 </div>
 <form class="form" (submit)="onSubmit($event)">
     <div class="field">
@@ -11,11 +11,11 @@
         <input type="text" name="username" [(ngModel)]="username" />
     </div>
     <div class="field">
-        <label for="username">password</label>
+        <label for="username">senha para confirmar alterações</label>
         <input type="password" name="password" [(ngModel)]="password" />
     </div>
     <div class="field-button">
-        <a routerLink="/auth">Conectar-se</a>
-        <button type="submit">Cadastrar</button>
+        <a></a>
+        <button type="submit">Editar informações</button>
     </div>
 </form>

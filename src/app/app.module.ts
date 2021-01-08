@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
+import { MatDialogModule } from '@angular/material/dialog';
+
 import { FormsModule  } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -18,6 +20,8 @@ import { TopBarMasterComponent } from './pages/master-dash/components/top-bar-ma
 import { SideBarMasterComponent } from './pages/master-dash/components/side-bar-master/side-bar-master.component';
 import { UserDetailComponent } from './pages/master-dash/pages/user-detail/user-detail.component';
 import { IndexMasterComponent } from './pages/master-dash/pages/index-master/index-master.component';
+import { EditImageModalComponent } from './pages/master-dash/pages/user-detail/modal/edit-image-modal/edit-image-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   { 
@@ -54,13 +58,16 @@ const routes: Routes = [
     SideBarMasterComponent,
     UserDetailComponent,
     IndexComponent,
-    IndexMasterComponent
+    IndexMasterComponent,
+    EditImageModalComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

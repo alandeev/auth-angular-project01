@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { EditImageModalComponent } from './modal/edit-image-modal/edit-image-modal.component';
 
 export interface IImage {
   filename: string;
@@ -9,23 +11,35 @@ export interface IImage {
   templateUrl: './user-detail.component.html',
   styleUrls: ['./user-detail.component.css']
 })
-export class UserDetailComponent implements OnInit {
+export class UserDetailComponent {
   name: string;
   username: string;
   password: string;
   image: IImage;
-  constructor() {
+  result: string
+
+  constructor(public dialog: MatDialog) {
     var user = JSON.parse(localStorage.getItem("user"));
     this.name = user.name;
     this.username = user.username;
     this.image = user.image;
   }
 
-  ngOnInit(): void {
-  }
-  
   onSubmit(event: Event) {
 
   }
 
+  openDialog(): void {
+    const dialogRef = this.dialog.open(EditImageModalComponent, {
+      width: '500px',
+      height: '200px',
+      data: {name: 'pedro', animal: 'dawdaw'}
+    });
+
+    dialogRef.afterClosed().subscribe(imageName => {
+      if(imageName){
+        this.image = { filename: imageName };
+      }
+    });
+  }
 }

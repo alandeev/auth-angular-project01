@@ -1,0 +1,7 @@
+<form class="form-modal-edit-image" (submit)="onSubmit($event)">
+    <div class="field" >
+        <label for="fileupload">Escolha a imagem</label>
+        <input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".png,.jpg,.jpge" />
+    </div>
+    <button type="submit">Editar</button>
+</form>
