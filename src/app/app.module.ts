@@ -22,6 +22,7 @@ import { UserDetailComponent } from './pages/master-dash/pages/user-detail/user-
 import { IndexMasterComponent } from './pages/master-dash/pages/index-master/index-master.component';
 import { EditImageModalComponent } from './pages/master-dash/pages/user-detail/modal/edit-image-modal/edit-image-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PostComponent } from './pages/master-dash/pages/index-master/post/post.component';
 
 const routes: Routes = [
   { 
@@ -59,7 +60,8 @@ const routes: Routes = [
     UserDetailComponent,
     IndexComponent,
     IndexMasterComponent,
-    EditImageModalComponent
+    EditImageModalComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

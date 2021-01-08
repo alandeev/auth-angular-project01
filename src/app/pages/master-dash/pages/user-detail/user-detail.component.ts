@@ -32,8 +32,7 @@ export class UserDetailComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(EditImageModalComponent, {
       width: '500px',
-      height: '200px',
-      data: {name: 'pedro', animal: 'dawdaw'}
+      height: '200px'
     });
 
     dialogRef.afterClosed().subscribe(imageName => {

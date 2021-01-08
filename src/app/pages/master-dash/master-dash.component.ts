@@ -10,6 +10,7 @@ export class MasterDashComponent implements OnInit {
   public user: IUser; 
   public selectPage = "home";
   constructor() { 
+    
     this.user = JSON.parse(localStorage.getItem("user"));
   }
 

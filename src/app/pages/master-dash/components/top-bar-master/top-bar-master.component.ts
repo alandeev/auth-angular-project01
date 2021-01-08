@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class TopBarMasterComponent {
   @Output('onSelect') evt = new EventEmitter();
+  @Input() role: string;
+  
   constructor(private router: Router) { }
 
   logout(){

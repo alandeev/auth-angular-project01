@@ -1,0 +1,32 @@
+.post-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: solid 0.01cm;
+}
+
+.post-item .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-item .top .profile-details {
+    display: flex;
+}
+
+.post-item .top .profile-details img{
+    margin-right: 10px;
+}
+
+.post-item .top .delete-button {
+    border: none;
+    outline-width: 0;
+    background: transparent;
+}
+
+.post-item .down {
+    /* display: flex; */
+}

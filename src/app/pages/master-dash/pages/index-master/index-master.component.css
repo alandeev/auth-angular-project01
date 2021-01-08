@@ -1,0 +1,22 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 4px;
+}
+
+.form .field {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+}
+
+.form .field input, textarea {
+    padding: 6px;
+}
+
+.form button[type="submit"]{
+    align-self: flex-end;
+    width: 125px;
+    height: 35px;
+}
