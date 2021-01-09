@@ -1,16 +1,16 @@
 <h1>Página principal</h1>
 <br>
-<form class="form">
+<form class="form" (submit)="onSubmit($event)">
     <div class="field">
         <label for="title">Titulo</label>
-        <input name="title" id="title" type="text"/>
+        <input name="title" id="title" [(ngModel)]="title" type="text"/>
     </div>
     <div class="field">
         <label for="description">Descrição</label>
-        <textarea name="description" id="description" cols="20" rows="5"></textarea>
+        <textarea name="description" [(ngModel)]="description" id="description" cols="20" rows="5"></textarea>
     </div>
     <button type="submit">Postar</button>
 </form>
-<section class="section">   
+<section class="section">
     <app-post *ngFor="let post of posts" [id]="post.id" [title]="post.title" [description]="post.description" [user]="post.user"></app-post>
 </section>
